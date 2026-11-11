@@ -1,1 +1,8 @@
+[
+  { "id": "all", "name": "Discover All", "icon": "fa-compass" },
+  { "id": "architecture", "name": "Architecture", "icon": "fa-building" },
+  { "id": "interior", "name": "Interior", "icon": "fa-couch" },
+  { "id": "art", "name": "Art & Design", "icon": "fa-palette" },
+  { "id": "nature", "name": "Nature & Mood", "icon": "fa-leaf" }
+]
 
