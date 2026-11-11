@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA — Discover What Moves You</title>
+  
+  <!-- SEO & Open Graph Metadata -->
+  <meta name="description" content="A considered collection of visual ideas, beautiful details and places worth discovering." />
+  <meta property="og:title" content="FORMA — Premium Visual Discovery" />
+  <meta property="og:description" content="Discover what moves you through considered architectural, interior, and artistic visual collections." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS & Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-amber-600 selection:text-white">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 bg-[var(--bg-surface)]/90 backdrop-blur-md border-b border-[var(--border-color)] transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center space-x-2 shrink-0">
+        <span class="text-xl font-light tracking-widest uppercase font-serif">Forma</span>
+      </a>
+
+      <!-- Compact Advanced Search Interface -->
+      <div class="relative flex-1 max-w-xl mx-4 hidden md:block">
+        <div class="relative flex items-center">
+          <i class="fa-solid fa-search absolute left-4 text-[var(--text-secondary)] text-sm"></i>
+          <input type="text" id="advanced-search-input" placeholder="Search by title, tag, or mood..." class="w-full pl-11 pr-4 py-2.5 rounded-full bg-[var(--bg-primary)] border border-[var(--border-color)] text-sm focus:outline-none focus:border-amber-600 transition" />
+        </div>
+        <!-- Suggestions dropdown -->
+        <div id="search-suggestions" class="absolute left-0 right-0 top-full mt-2 bg-[var(--bg-surface)] border border-[var(--border-color)] rounded-2xl shadow-xl hidden z-50 overflow-hidden"></div>
+      </div>
+
+      <!-- Action Buttons & Controls -->
+      <div class="flex items-center space-x-3">
+        <button id="add-image-nav-btn" class="hidden sm:flex items-center space-x-2 px-4 py-2 rounded-full bg-[var(--bg-primary)] hover:bg-[var(--border-color)] border border-[var(--border-color)] text-sm font-medium transition">
+          <i class="fa-solid fa-plus text-xs"></i>
+          <span>Add Image</span>
+        </button>
+
+        <button id="saved-nav-btn" class="relative p-2.5 rounded-full bg-[var(--bg-primary)] hover:bg-[var(--border-color)] border border-[var(--border-color)] transition text-[var(--text-primary)]" title="Saved Collection">
+          <i class="fa-solid fa-bookmark"></i>
+        </button>
+
+        <button id="theme-toggle-btn" class="p-2.5 rounded-full bg-[var(--bg-primary)] hover:bg-[var(--border-color)] border border-[var(--border-color)] transition text-[var(--text-primary)]" title="Toggle Theme">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 text-center space-y-4">
+    <h1 class="text-4xl sm:text-5xl font-light tracking-tight">Collect what moves you.</h1>
+    <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-base sm:text-lg font-light leading-relaxed">
+      A considered collection of visual ideas, beautiful details and places worth discovering.
+    </p>
+
+    <!-- Mobile Search Bar -->
+    <div class="relative max-w-md mx-auto pt-2 md:hidden">
+      <div class="relative flex items-center">
+        <i class="fa-solid fa-search absolute left-4 text-[var(--text-secondary)] text-sm"></i>
+        <input type="text" id="advanced-search-input-mobile" placeholder="Search visual ideas..." class="w-full pl-11 pr-4 py-2.5 rounded-full bg-[var(--bg-surface)] border border-[var(--border-color)] text-sm focus:outline-none focus:border-amber-600 transition" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Navigation Bar -->
+  <nav class="sticky top-20 z-30 bg-[var(--bg-primary)]/90 backdrop-blur-md py-4 border-b border-[var(--border-color)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center space-x-3 overflow-x-auto no-scrollbar" id="category-nav-container">
+      <!-- Dynamically populated categories -->
+    </div>
+  </nav>
+
+  <!-- Main Discovery Feed -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+    <div id="discovery-grid" class="masonry-grid">
+      <!-- Dynamically rendered masonry cards -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--border-color)] py-8 mt-12 bg-[var(--bg-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--text-secondary)]">
+      <div>&copy; 2026 FORMA Visual Discovery Ecosystem. All rights reserved.</div>
+      <div class="flex items-center space-x-6">
+        <span class="hover:text-[var(--text-primary)] cursor-pointer">Privacy Policy</span>
+        <span class="hover:text-[var(--text-primary)] cursor-pointer">Terms of Service</span>
+        <span class="hover:text-[var(--text-primary)] cursor-pointer">Editorial Guidelines</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript ES Modules Entry Point -->
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
 
